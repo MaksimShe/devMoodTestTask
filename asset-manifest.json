@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/%3Crepo-name%3E/static/css/main.81f423ff.css",
+    "main.js": "/%3Crepo-name%3E/static/js/main.5bad5894.js",
+    "index.html": "/%3Crepo-name%3E/index.html",
+    "main.81f423ff.css.map": "/%3Crepo-name%3E/static/css/main.81f423ff.css.map",
+    "main.5bad5894.js.map": "/%3Crepo-name%3E/static/js/main.5bad5894.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81f423ff.css",
+    "static/js/main.5bad5894.js"
+  ]
+}
