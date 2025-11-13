@@ -1,26 +1,29 @@
+// src/App.tsx
 import React from 'react';
-import logo from './logo.svg';
+import { SideBar } from "./Copmonents/SideBar/SideBar";
+import { Route, Routes } from "react-router";
+import { Characters } from "./Copmonents/Characters/Characters";
 import './App.css';
+import { CardDetails } from "./Copmonents/CardDetails/CardDetails";
+import { CharactersProvider } from "./context/CharactersContext";
+import {Spells} from "./Copmonents/Spells/Spells";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <CharactersProvider>
+            <div className="App">
+                <SideBar />
+                <header className="App-header">
+                    <Routes>
+                        <Route path="/" element={'a'} />
+                        <Route path="/characters" element={<Characters />} />
+                        <Route path="/characters/:personId" element={<CardDetails />} />
+                        <Route path="/spells" element={<Spells />} />
+                    </Routes>
+                </header>
+            </div>
+        </CharactersProvider>
+    );
 }
 
 export default App;

@@ -1,0 +1,51 @@
+.spells {
+    margin: 0;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 230px);
+    gap: 25px;
+    justify-content: center;
+}
+
+.wrapperSpells {
+    display: block;
+    justify-content: center;
+}
+
+.spell {
+    background-color: darkslategray;
+    text-align: center;
+    padding-block: 10px;
+    padding-inline: 30px;
+    border-radius: 15px;
+    border: 1px solid dimgrey;
+}
+
+.spellDesc{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    font-size: 12px;
+    text-align: left;
+}
+
+.spellName {
+    color: white;
+    margin: 0 0 10px 0;
+}
+
+.spellsTitle {
+    text-align: center;
+    font-family: "Al Nile", cursive;
+}
+
+.spellsDesc {
+    text-align: center;
+    color: darkslategray;
+    font-weight: 400;
+    font-family: "Al Nile", cursive;
+}
