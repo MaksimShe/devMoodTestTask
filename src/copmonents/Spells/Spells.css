@@ -19,6 +19,7 @@
     padding-inline: 30px;
     border-radius: 15px;
     border: 1px solid dimgrey;
+    cursor: default;
 }
 
 .spellDesc{
@@ -48,4 +49,9 @@
     color: darkslategray;
     font-weight: 400;
     font-family: "Al Nile", cursive;
+}
+
+.spell:hover {
+    transform: scale(102%);
+    transition: transform 0.5s;
 }

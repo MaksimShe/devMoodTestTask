@@ -1,14 +1,19 @@
-import axios from 'axios';
+import axios from "axios";
+import { Spell } from "../types/Character";
 
-export const apiRequest = async () => {
-    const apiUrlChar = 'https://hp-api.onrender.com/api/characters';
-    const respChar = await axios.get(apiUrlChar);
-    const characters = respChar.data;
+const API_BASE = "https://hp-api.onrender.com/api";
 
-    const apiUrlSpells = 'https://hp-api.onrender.com/api/spells';
-    const respSpells = await axios.get(apiUrlSpells);
-    const spells = respSpells.data;
+export const getAllCharacters = async () => {
+    const { data } = await axios.get(`${API_BASE}/characters`);
+    return data;
+};
 
+export const getCharacterById = async (id: string) => {
+    const { data } = await axios.get(`${API_BASE}/character/${id}`);
+    return data[0];
+};
 
-    return { characters, spells };
+export const getSpells = async (): Promise<Spell[]> => {
+    const { data } = await axios.get(`${API_BASE}/spells`);
+    return data;
 };

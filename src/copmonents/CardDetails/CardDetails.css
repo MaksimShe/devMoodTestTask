@@ -1,19 +1,23 @@
 .cardDetails {
     width: 100%;
     display: flex;
+    justify-items: left;
+    align-content: start;
     gap: 50px;
 }
 
 .imgDetails {
     width: 300px;
     border-radius: 20px;
-    margin-block: auto;
-
+    align-self: flex-start;
+    margin-top: 50px;
 }
 
 .cardMainInfo {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin-right: 50px;
 }
 
 .altNamesDetails {
@@ -22,20 +26,25 @@
 }
 
 .detailsField {
+    box-sizing: border-box;
+    padding: 10px;
     font-size: 14px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-block: 20px;
+    padding-block: 15px;
     background-color: antiquewhite;
     border: 1px solid gray;
     border-radius: 25px;
-    margin: 5px;
     width: 150px;
+    color: dimgray;
+    font-weight: 300;
 }
 
 .detailsInfo{
-    font-size: 18px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
 }
 
 .uniqChar{
@@ -50,5 +59,9 @@
 }
 
 .charContainer{
+    width: 100%;
     margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    gap: 10px;
 }

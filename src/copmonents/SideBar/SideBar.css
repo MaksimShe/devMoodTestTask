@@ -40,3 +40,8 @@
     box-shadow: 5px 5px 10px gray;
     transition: box-shadow 0.3s, transform 0.3s;
 }
+
+.sideLinkIsActive {
+    box-shadow: 3px 3px 5px black;
+
+}

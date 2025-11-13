@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import './Spells.css';
+import {Loader} from "../Loader/Loader";
+import {getSpells} from "../../api/apiRequest";
 
 type Spell = {
     id: string;
@@ -10,12 +11,23 @@ type Spell = {
 
 export const Spells = () => {
     const [spells, setSpells] = useState<Spell[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        axios.get("https://hp-api.onrender.com/api/spells").then(res => {
-            setSpells(res.data);
-        });
+        (async () => {
+            const spellsApi: Spell[] = await getSpells();
+            setSpells(spellsApi);
+            setIsLoading(false);
+        })();
     }, []);
+
+    if (isLoading) {
+        return <Loader />;
+    }
+
+    if (!spells) {
+        return <div>Character not found</div>;
+    }
 
     return (
         <div className='wrapperSpells'>

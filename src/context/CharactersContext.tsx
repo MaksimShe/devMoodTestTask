@@ -1,4 +1,3 @@
-// src/context/CharactersContext.tsx
 import React, { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 import {Character} from "../types/Character";

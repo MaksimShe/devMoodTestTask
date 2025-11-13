@@ -8,23 +8,18 @@ type Props = {
 }
 
 export const CharacterCard: React.FC<Props> = ({
-    character
+    character                                       // STATE NavLink
 })=> {
-    let personImg = '';
-    if(!character.image) {
-        personImg = '/noImg.png';
-    } else {
-        personImg = character.image;
-    }
+
     return (
         <NavLink className='link' to={character.id}>
             <div className="characterCard">
                 <img
                     className='photo'
-                    src={personImg}
+                    src={character.image || '/noImg.png'}
                     alt='person img'
-                    width={200} />
-                <h2 className='name' >{character.name || 'Unknown'}'</h2>
+                />
+                <h2 className='name' >{character.name || 'Unknown'}</h2>
                 <p className='house' >{character.house || 'Unknown'}</p>
             </div>
         </NavLink>
